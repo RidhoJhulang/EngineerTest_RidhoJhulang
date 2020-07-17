@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>007</title>
+</head>
+  <body>
+
+    
+<form action="#" method="post" name="sign up for beta form">
+      <div class="header">
+         <p>Reverse World</p>
+      </div>
+      <div class="input">
+        <input type="text" class="button" id="reverseWordArr" name="reverseWordArr">
+        <button  id="myBtn">tampil</button>
+      </div>
+    </form>
+    <p>Hasil : <span id="tampil"></span> </p>
+</body>
+ <script>
+  document.getElementById("myBtn").addEventListener("click", function(event){
+    event.preventDefault()
+      let ambil = document.getElementById("reverseWordArr").value
+  var wordsArr = ambil.split(' ');
+  // console.log(wordsArr);
+  var reverseWordArr = [];
+  wordsArr.forEach(word => {
+    var reverseWord = '';
+    for(var i = word.length - 1; i >= 0; i--){
+      reverseWord += word[i];
+    }
+    reverseWordArr.push(reverseWord);
+    let join = reverseWordArr.join(' ');
+    // console.log(join)
+    document.getElementById("tampil").innerHTML = join
+  });
+  })
+
+</script>
+</html>
