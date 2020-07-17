@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    <meta charset="utf-8">
+    <title>004</title>
+    <link rel="stylesheet" href="./004.css">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+    </head>
+<body>
+<script type="text/javascript">
+	function checkPalindrome() {
+		var revStr = "";
+		var str = document.getElementById("str").value;
+		var i = str.length;
+			for(var j=i; j>=0; j--) {
+			revStr = revStr+str.charAt(j);
+		}
+		if(str == revStr) {
+			alert(str+" Palindrome");
+		} else {
+			alert(str+" Bukan Palindrome");
+		}
+	}
+</script>
+	<form action="#" method="post" name="sign up for beta form" >
+		<div class="header">
+         <p>Palindrom atau Bukan</p>
+      </div>
+      <div class="input">
+		<input type="text" class="button" id="str" placeholder="Inputkan Kata atau kalimat" name="string"/>
+		<input type="button" class="button" id="submit" value="Check"   name="submit" onclick="checkPalindrome();"/>
+	  </div>
+</form>
+</body>
+</html>

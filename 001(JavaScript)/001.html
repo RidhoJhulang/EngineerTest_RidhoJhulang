@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Menentukan Grade dari Suatu Masukan Angka</title>
+</head>
+<body>
+    <script>
+       
+        let nilai = prompt("Input Nilai :");
+		let grade = "";
+
+switch(true){
+    case nilai >= 90:
+        grade = "A";
+        break;
+    case nilai >= 80:
+        grade = "B";
+        break;
+    case nilai >= 70:
+        grade = "C";
+        break;
+    case nilai >= 60:
+        grade = "D";
+        break;
+    case nilai < 60:
+        grade = "E";
+        break;
+}
+
+document.write(`<h3>Grade anda: ${grade}</h3>`);
+
+    </script>
+</body>
+</html>

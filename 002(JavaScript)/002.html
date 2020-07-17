@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>002</title>
+    <link rel="stylesheet" href="./002.css">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+
+    <script>
+            function findOddEven(){
+
+                //mengambil nilai inputan
+                var num = document.getElementById('num').value;
+
+                if (num != "") {
+
+                    if ( num % 2 == 0) {
+                        document.getElementById('result').innerHTML = num + ' adalah bilangan Genap';
+                    }else {
+                        document.getElementById('result').innerHTML = num + ' adalah bilangan Ganjil';
+                    }
+                     return true;
+                }else {
+                alert('Anda harus menginputkan bilangan!');
+                }
+            }        
+     </script>
+
+  </head>
+  <body>
+    <form action="#" method="post" name="sign up for beta form">
+      <div class="header">
+         <p>Menentukan Bilangan Ganjil atau Genap</p>
+      </div>
+      <div class="description">
+        <p id="result"></p>
+      </div>
+      <div class="input">
+        <input type="number" class="button" id="num" name="num" placeholder="Inputkan Bilangan" min="0" required>
+        <input type="button" class="button" id="submit" name="find" value="Submit" onclick="findOddEven()">
+      </div>
+    </form>
+  </body>
+</html>

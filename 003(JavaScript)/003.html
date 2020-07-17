@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="./003.css">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+  <title>003</title>
+</head>
+<body>
+
+<script>
+
+var numbers = [10, 30, 33, 41, 100, 45, 56, 78, 90, 88, 34, 63, 99, 1, 7, 83];
+
+function minMaxAvg(arr){
+   
+    var max = arr[0];
+    var min = arr[0];
+    var avg = 0;
+    
+    for(var i = 0; i < arr.length;i++){
+        if(arr[i] > max){
+            max = arr[i];
+        }
+        if(arr[i] < min){
+            min = arr[i];
+        }
+        avg += arr[i];
+    }
+    return ("Angka Maximal " + max + ", Angka Minimal " + min + ", Rata-rata " + avg/arr.length)
+}
+
+// console.log(minMaxAvg([10, 30, 33, 41, 100, 45, 56, 78, 90, 88, 34, 63, 99, 1, 7, 83]));
+
+document.write("Deretan angka : " + numbers + "</br>");
+document.write(minMaxAvg([10, 30, 33, 41, 100, 45, 56, 78, 90, 88, 34, 63, 99, 1, 7, 83]) + "</br>");
+</script>
+</body>
+</html>
